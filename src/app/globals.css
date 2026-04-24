@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* ── Gilroy Local Font ── */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy/Gilroy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy/Gilroy-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy/Gilroy-Extrabold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-brand-terracotta: #C94A2C;
+  --color-brand-beige: #C8A07A;
+  --color-brand-cream: #FAF5EE;
+  --color-brand-dark: #2D2A26;
+  /* Nouvelle couleur : Laiton/Or vieilli pour la touche marocaine */
+  --color-brand-brass: #C5A059;
+}
+
+@layer base {
+  body {
+    font-family: 'Gilroy', sans-serif;
+    background-color: var(--color-brand-cream);
+    color: var(--color-brand-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* On cache la flèche native des balises <details> pour la FAQ */
+details>summary {
+  list-style: none;
+}
+
+details>summary::-webkit-details-marker {
+  display: none;
+}
