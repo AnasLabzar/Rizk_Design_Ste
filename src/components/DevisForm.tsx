@@ -79,8 +79,7 @@ export default function DevisForm({ isOpen, onClose }: DevisFormProps) {
                         animate={{ x: 0 }}
                         exit={{ x: "100%" }}
                         transition={{ type: "spring", stiffness: 300, damping: 35 }}
-                        className="fixed top-0 right-0 h-full w-full max-w-md z-50 flex flex-col"
-                        style={{ background: "#FAFAF8" }}
+                        className="fixed top-0 right-0 h-full w-full max-w-md z-50 flex flex-col bg-brand-cream border-l border-brand-dark/10 shadow-2xl"
                     >
                         {/* Header du panel */}
                         <div className="flex items-center justify-between px-8 py-6 border-b border-brand-beige/30">
@@ -217,7 +216,7 @@ export default function DevisForm({ isOpen, onClose }: DevisFormProps) {
                                                         placeholder="Décrivez votre espace, vos envies, style souhaité..."
                                                         value={form.message}
                                                         onChange={(e) => setForm({ ...form, message: e.target.value })}
-                                                        className="w-full bg-white border border-brand-beige/40 rounded-2xl px-4 py-3 text-sm text-brand-dark placeholder:text-brand-dark/30 focus:outline-none focus:border-brand-terracotta/60 focus:ring-2 focus:ring-brand-terracotta/10 transition-all resize-none"
+                                                        className="w-full bg-[#ffffff] dark:bg-white/5 border border-brand-beige/40 rounded-2xl px-4 py-3 text-sm text-brand-dark placeholder:text-brand-dark/30 focus:outline-none focus:border-brand-terracotta/60 focus:ring-2 focus:ring-brand-terracotta/10 transition-all resize-none shadow-sm"
                                                     />
                                                 </div>
                                             </div>
@@ -287,7 +286,7 @@ function Field({
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
                 required={required}
-                className="w-full bg-white border border-brand-beige/40 rounded-2xl px-4 py-3 text-sm text-brand-dark placeholder:text-brand-dark/30 focus:outline-none focus:border-brand-terracotta/60 focus:ring-2 focus:ring-brand-terracotta/10 transition-all"
+                className="w-full bg-[#ffffff] dark:bg-white/5 border border-brand-beige/40 rounded-2xl px-4 py-3 text-sm text-brand-dark placeholder:text-brand-dark/30 focus:outline-none focus:border-brand-terracotta/60 focus:ring-2 focus:ring-brand-terracotta/10 transition-all shadow-sm"
             />
         </div>
     );
@@ -316,12 +315,12 @@ function SelectField({
                     value={value}
                     onChange={(e) => onChange(e.target.value)}
                     required={required}
-                    className="w-full appearance-none bg-white border border-brand-beige/40 rounded-2xl px-4 py-3 pr-10 text-sm text-brand-dark focus:outline-none focus:border-brand-terracotta/60 focus:ring-2 focus:ring-brand-terracotta/10 transition-all cursor-pointer"
-                    style={{ color: value ? "" : "rgba(61,46,35,0.3)" }}
+                    className="w-full appearance-none bg-[#ffffff] dark:bg-white/5 border border-brand-beige/40 rounded-2xl px-4 py-3 pr-10 text-sm text-brand-dark focus:outline-none focus:border-brand-terracotta/60 focus:ring-2 focus:ring-brand-terracotta/10 transition-all cursor-pointer shadow-sm"
+                    style={{ color: value ? "inherit" : "rgba(var(--dark-rgb), 0.3)" }}
                 >
                     <option value="" disabled>Sélectionner...</option>
                     {options.map((opt) => (
-                        <option key={opt} value={opt} style={{ color: "#3d2e23" }}>
+                        <option key={opt} value={opt} className="bg-brand-cream text-brand-dark">
                             {opt}
                         </option>
                     ))}

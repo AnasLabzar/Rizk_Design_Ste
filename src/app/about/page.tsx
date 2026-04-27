@@ -7,7 +7,7 @@ import { ArrowLeft } from "lucide-react";
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen bg-[#FAF5EE] pt-32 pb-24 selection:bg-brand-terracotta selection:text-white">
+        <main className="min-h-screen bg-brand-cream pt-32 pb-24 selection:bg-brand-terracotta selection:text-white">
             <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
                 
                 {/* Bouton retour */}

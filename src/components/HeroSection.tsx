@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Plus } from "lucide-react";
 import DevisForm from "@/components/DevisForm";
+import Image from "next/image";
 
 // ── Images de projets d'intérieur ──
 const heroImages = [
@@ -21,6 +22,13 @@ const heroImages = [
     },
 ];
 
+// Crosshair component pour le côté architectural
+const Crosshair = ({ className }: { className: string }) => (
+    <div className={`absolute w-4 h-4 text-brand-dark/20 flex items-center justify-center ${className}`}>
+        <Plus className="w-full h-full" strokeWidth={1} />
+    </div>
+);
+
 export default function HeroSection() {
     const [devisOpen, setDevisOpen] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -29,18 +37,12 @@ export default function HeroSection() {
     const heroImgY = useTransform(scrollYProgress, [0, 1], [0, 80]);
     const textY = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
-    // Crosshair component pour le côté architectural
-    const Crosshair = ({ className }: { className: string }) => (
-        <div className={`absolute w-4 h-4 text-brand-dark/20 flex items-center justify-center ${className}`}>
-            <Plus className="w-full h-full" strokeWidth={1} />
-        </div>
-    );
 
     return (
         <>
             <div
                 ref={containerRef}
-                className="relative min-h-[100svh] w-full flex flex-col justify-center overflow-hidden bg-[#F2EFEA]"
+                className="relative min-h-[100svh] w-full flex flex-col justify-center overflow-hidden bg-brand-cream"
             >
                 {/* ── Motif Architectural : Dot Grid ── */}
                 <div 
@@ -77,7 +79,7 @@ export default function HeroSection() {
                         >
                             <span className="w-1.5 h-1.5 rounded-full bg-brand-terracotta" />
                             <span className="text-[10px] font-bold text-brand-dark/50 uppercase tracking-[0.25em]">
-                                Studio d'Architecture d'Intérieur
+                                Studio d&apos;Architecture d&apos;Intérieur
                             </span>
                         </motion.div>
 
@@ -144,7 +146,7 @@ export default function HeroSection() {
                             <div className="w-[1px] h-8 bg-brand-dark/10" />
                             <div className="flex flex-col">
                                 <span className="text-2xl font-bold text-brand-dark">10 ans</span>
-                                <span className="text-[11px] text-brand-dark/50 font-semibold uppercase tracking-wider mt-1">D'expertise</span>
+                                <span className="text-[11px] text-brand-dark/50 font-semibold uppercase tracking-wider mt-1">D&apos;expertise</span>
                             </div>
                             <div className="w-[1px] h-8 bg-brand-dark/10 hidden md:block" />
                             <div className="flex flex-col hidden md:flex">
@@ -166,7 +168,7 @@ export default function HeroSection() {
                             transition={{ duration: 1.1, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
                             className="absolute top-0 right-0 w-[80%] h-[75%] rounded-[32px] overflow-hidden shadow-2xl z-10"
                         >
-                            <img src={heroImages[0].src} alt={heroImages[0].label} className="w-full h-full object-cover" />
+                            <Image src={heroImages[0].src} alt={heroImages[0].label} fill className="object-cover" unoptimized />
                         </motion.div>
 
                         {/* 2. Image secondaire (Bas Gauche) */}
@@ -174,9 +176,9 @@ export default function HeroSection() {
                             initial={{ opacity: 0, x: -30, y: 30 }}
                             animate={{ opacity: 1, x: 0, y: 0 }}
                             transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
-                            className="absolute bottom-0 left-0 w-[55%] h-[45%] rounded-[24px] overflow-hidden shadow-2xl z-20 border-4 border-[#F2EFEA]"
+                            className="absolute bottom-0 left-0 w-[55%] h-[45%] rounded-[24px] overflow-hidden shadow-2xl z-20 border-4 border-brand-cream"
                         >
-                            <img src={heroImages[1].src} alt={heroImages[1].label} className="w-full h-full object-cover" />
+                            <Image src={heroImages[1].src} alt={heroImages[1].label} fill className="object-cover" unoptimized />
                             <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent" />
                             <p className="absolute bottom-4 left-5 text-white text-[11px] font-bold tracking-wide uppercase">{heroImages[1].label}</p>
                         </motion.div>
@@ -186,9 +188,9 @@ export default function HeroSection() {
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.9, delay: 0.8 }}
-                            className="absolute bottom-[10%] right-[5%] w-[35%] h-[35%] rounded-[20px] overflow-hidden shadow-xl z-30 border-4 border-[#F2EFEA]"
+                            className="absolute bottom-[10%] right-[5%] w-[35%] h-[35%] rounded-[20px] overflow-hidden shadow-xl z-30 border-4 border-brand-cream"
                         >
-                            <img src={heroImages[2].src} alt={heroImages[2].label} className="w-full h-full object-cover" />
+                            <Image src={heroImages[2].src} alt={heroImages[2].label} fill className="object-cover" unoptimized />
                             <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent" />
                             <p className="absolute bottom-3 left-4 text-white text-[10px] font-bold tracking-wide uppercase">{heroImages[2].label}</p>
                         </motion.div>

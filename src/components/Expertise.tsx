@@ -19,7 +19,7 @@ export default function Expertise() {
                 <div>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">Une Expertise <br /><span className="text-brand-brass">Basée sur la Précision.</span></h2>
                     <p className="text-brand-cream/70 text-lg leading-relaxed mb-8">
-                        De l'esquisse initiale à la remise des clés, nous maîtrisons chaque étape du processus architectural. Notre équipe technique utilise les derniers logiciels de pointe pour garantir une exécution parfaite.
+                        De l&apos;esquisse initiale à la remise des clés, nous maîtrisons chaque étape du processus architectural. Notre équipe technique utilise les derniers logiciels de pointe pour garantir une exécution parfaite.
                     </p>
                     <div className="grid grid-cols-2 gap-8 border-t border-brand-beige/20 pt-8">
                         <div>

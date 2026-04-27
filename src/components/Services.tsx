@@ -73,11 +73,11 @@ export default function Services() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="group bg-white/40 hover:bg-white transition-colors duration-500 rounded-[20px] p-8 md:p-10 border border-brand-dark/[0.04] shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] flex flex-col"
+                            className="group bg-[#ffffff]/40 dark:bg-[#ffffff]/5 hover:bg-[#ffffff] dark:hover:bg-[#ffffff]/10 transition-colors duration-500 rounded-[20px] p-8 md:p-10 border border-brand-dark/[0.04] shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] flex flex-col"
                         >
                             {/* Icone GIF Animé */}
                             <div className="mb-10 relative">
-                                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center overflow-hidden border border-brand-dark/5 group-hover:border-brand-terracotta/20 transition-colors duration-500 relative">
+                                <div className="w-20 h-20 rounded-full bg-[#ffffff] dark:bg-[#ffffff]/10 flex items-center justify-center overflow-hidden border border-brand-dark/5 group-hover:border-brand-terracotta/20 transition-colors duration-500 relative">
                                     {/* unoptimized={true} est CRITIQUE pour que les GIFs s'animent dans Next.js */}
                                     <Image 
                                         src={service.gif}

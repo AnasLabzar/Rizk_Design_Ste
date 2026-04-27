@@ -40,7 +40,7 @@ export default function About() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                            className="absolute -bottom-10 right-0 md:-right-10 w-[55%] aspect-square rounded-[24px] overflow-hidden border-8 border-[#FAF5EE] shadow-2xl hidden md:block"
+                            className="absolute -bottom-10 right-0 md:-right-10 w-[55%] aspect-square rounded-[24px] overflow-hidden border-8 border-brand-cream shadow-2xl hidden md:block"
                         >
                             <Image 
                                 src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop"

@@ -75,7 +75,7 @@ const technologies = [
 
 export default function ExpertisePage() {
     return (
-        <main className="min-h-screen bg-[#FAF5EE] pt-32 pb-24 selection:bg-brand-terracotta selection:text-white overflow-hidden relative">
+        <main className="min-h-screen bg-brand-cream pt-32 pb-24 selection:bg-brand-terracotta selection:text-white overflow-hidden relative">
             
             {/* Background subtil */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">

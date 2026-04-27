@@ -14,7 +14,7 @@ export default function Footer() {
     return (
         <footer className="w-full relative z-10">
             {/* ── Bandeau Partenaires (Séparation) ── */}
-            <div className="w-full bg-[#FAF5EE] py-10 overflow-hidden flex whitespace-nowrap border-y border-brand-dark/10 relative z-20">
+            <div className="w-full bg-brand-cream py-10 overflow-hidden flex whitespace-nowrap border-y border-brand-dark/10 relative z-20">
                 <div className="animate-marquee flex gap-16 md:gap-32 items-center">
                     {partners.map((partner, i) => (
                         <div key={`p1-${i}`} className={`relative h-12 md:h-16 w-32 md:w-48 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-500 cursor-default flex items-center justify-center shrink-0 ${partner.scale}`}>
@@ -45,7 +45,7 @@ export default function Footer() {
             </div>
 
             {/* ── Footer Principal ── */}
-            <div className="bg-[#FAF5EE] text-brand-dark pt-24 pb-12 w-full relative">
+            <div className="bg-brand-cream text-brand-dark pt-24 pb-12 w-full relative">
                 {/* Background très subtil */}
                 <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/[0.02] to-transparent pointer-events-none" />
                 
@@ -113,7 +113,7 @@ export default function Footer() {
 
                     {/* Typographie Géante au centre avec effet */}
                     <div className="w-full text-center overflow-hidden mb-12 relative group cursor-default">
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#FAF5EE] via-transparent to-transparent z-10 pointer-events-none" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-brand-cream via-transparent to-transparent z-10 pointer-events-none" />
                         <h2 className="text-[10vw] md:text-[8vw] font-aesthetic text-brand-dark/5 leading-none select-none group-hover:text-brand-dark/10 transition-colors duration-1000 transform group-hover:scale-105">
                             Rizk Design.
                         </h2>

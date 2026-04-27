@@ -15,7 +15,7 @@ export default function Navbar() {
         <div className="w-full max-w-7xl mx-auto px-5 md:px-8 lg:px-12 flex items-center justify-between">
 
           {/* Logo Pill */}
-          <Link href="/" className="pointer-events-auto bg-white/90 backdrop-blur-md shadow-sm border border-brand-beige/20 text-brand-dark px-6 py-2.5 rounded-full flex items-center gap-2 hover:bg-white transition-colors duration-300">
+          <Link href="/" className="pointer-events-auto bg-[#ffffff]/90 dark:bg-white/10 backdrop-blur-md shadow-sm border border-brand-beige/20 text-brand-dark px-6 py-2.5 rounded-full flex items-center gap-2 hover:bg-[#ffffff] dark:hover:bg-white/20 transition-colors duration-300">
             <Image
               src="/img/logo.png"
               alt="Rizk Interior Design"
@@ -27,7 +27,7 @@ export default function Navbar() {
           </Link>
 
           {/* Liens de navigation (Desktop) - Pill */}
-          <div className="hidden md:flex pointer-events-auto bg-white/90 backdrop-blur-md shadow-sm border border-brand-beige/20 items-center gap-8 text-[13px] font-medium px-8 py-3 rounded-full">
+          <div className="hidden md:flex pointer-events-auto bg-[#ffffff]/90 dark:bg-white/10 backdrop-blur-md shadow-sm border border-brand-beige/20 items-center gap-8 text-[13px] font-medium px-8 py-3 rounded-full">
             <Link href="/portfolio" className="text-brand-dark hover:text-brand-terracotta transition-colors">
               Projets
             </Link>
@@ -36,6 +36,9 @@ export default function Navbar() {
             </Link>
             <Link href="/expertise" className="text-brand-dark/70 hover:text-brand-terracotta transition-colors">
               Expertise
+            </Link>
+            <Link href="/contact" className="text-brand-dark/70 hover:text-brand-terracotta transition-colors">
+              Contact
             </Link>
             {/* Phase 2: E-commerce */}
             <div className="relative group cursor-not-allowed">
@@ -50,7 +53,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <button
               onClick={() => setDevisOpen(true)}
-              className="pointer-events-auto bg-[#1a1a1a] text-white px-6 py-3 rounded-full text-[13px] hover:bg-brand-terracotta transition-colors flex items-center gap-2 font-medium shadow-md"
+              className="pointer-events-auto bg-brand-dark text-white px-6 py-3 rounded-full text-[13px] hover:bg-brand-terracotta transition-colors flex items-center gap-2 font-medium shadow-md"
             >
               Devis gratuit <ArrowUpRight className="w-4 h-4" />
             </button>
@@ -59,7 +62,7 @@ export default function Navbar() {
           {/* Menu Mobile */}
           <button
             onClick={() => setDevisOpen(true)}
-            className="md:hidden pointer-events-auto bg-white/90 backdrop-blur-md shadow-sm border border-brand-beige/20 text-brand-dark p-3 rounded-full"
+            className="md:hidden pointer-events-auto bg-[#ffffff]/90 dark:bg-white/10 backdrop-blur-md shadow-sm border border-brand-beige/20 text-brand-dark p-3 rounded-full"
           >
             <Menu className="w-5 h-5" />
           </button>

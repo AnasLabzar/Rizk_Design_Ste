@@ -38,7 +38,7 @@ export default function Testimonials() {
 
             {/* Décoration : Énorme guillemet en arrière-plan */}
             <div className="absolute top-20 left-10 md:left-32 text-[20rem] text-brand-dark/5 font-aesthetic leading-none pointer-events-none select-none">
-                "
+                &quot;
             </div>
 
             <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -73,7 +73,7 @@ export default function Testimonials() {
 
                             {/* Le Texte du Témoignage (Très grand) */}
                             <p className="text-3xl md:text-5xl font-light text-brand-dark leading-[1.3] mb-12 tracking-tight">
-                                "{reviews[currentIndex].text}"
+                                &quot;{reviews[currentIndex].text}&quot;
                             </p>
 
                             {/* Auteur */}

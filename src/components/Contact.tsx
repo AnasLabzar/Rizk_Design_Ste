@@ -6,7 +6,7 @@ export default function Contact() {
     return (
         <section id="contact" className="py-24 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-                <div className="bg-[#FAF5EE] rounded-[40px] p-8 md:p-16 flex flex-col lg:flex-row gap-16 items-center border border-brand-dark/5 shadow-sm">
+                <div className="bg-brand-cream rounded-[40px] p-8 md:p-16 flex flex-col lg:flex-row gap-16 items-center border border-brand-dark/5 shadow-sm">
 
                     {/* Section Texte */}
                     <div className="flex-1 space-y-8">
@@ -36,7 +36,7 @@ export default function Contact() {
                                     <input 
                                         type="text" 
                                         id="nom"
-                                        className="w-full bg-[#FAF5EE]/60 border border-brand-dark/10 rounded-2xl px-5 py-4 text-brand-dark focus:outline-none focus:border-brand-terracotta/50 focus:bg-white focus:ring-4 focus:ring-brand-terracotta/10 transition-all text-sm placeholder:text-brand-dark/30" 
+                                        className="w-full bg-brand-cream/60 border border-brand-dark/10 rounded-2xl px-5 py-4 text-brand-dark focus:outline-none focus:border-brand-terracotta/50 focus:bg-white focus:ring-4 focus:ring-brand-terracotta/10 transition-all text-sm placeholder:text-brand-dark/30" 
                                         placeholder="John Doe" 
                                     />
                                 </div>
@@ -49,7 +49,7 @@ export default function Contact() {
                                     <input 
                                         type="tel" 
                                         id="phone"
-                                        className="w-full bg-[#FAF5EE]/60 border border-brand-dark/10 rounded-2xl px-5 py-4 text-brand-dark focus:outline-none focus:border-brand-terracotta/50 focus:bg-white focus:ring-4 focus:ring-brand-terracotta/10 transition-all text-sm placeholder:text-brand-dark/30" 
+                                        className="w-full bg-brand-cream/60 border border-brand-dark/10 rounded-2xl px-5 py-4 text-brand-dark focus:outline-none focus:border-brand-terracotta/50 focus:bg-white focus:ring-4 focus:ring-brand-terracotta/10 transition-all text-sm placeholder:text-brand-dark/30" 
                                         placeholder="+212 6..." 
                                     />
                                 </div>
@@ -63,7 +63,7 @@ export default function Contact() {
                                 <textarea 
                                     id="message"
                                     rows={4} 
-                                    className="w-full bg-[#FAF5EE]/60 border border-brand-dark/10 rounded-2xl px-5 py-4 text-brand-dark focus:outline-none focus:border-brand-terracotta/50 focus:bg-white focus:ring-4 focus:ring-brand-terracotta/10 transition-all resize-none text-sm leading-relaxed placeholder:text-brand-dark/30" 
+                                    className="w-full bg-brand-cream/60 border border-brand-dark/10 rounded-2xl px-5 py-4 text-brand-dark focus:outline-none focus:border-brand-terracotta/50 focus:bg-white focus:ring-4 focus:ring-brand-terracotta/10 transition-all resize-none text-sm leading-relaxed placeholder:text-brand-dark/30" 
                                     placeholder="Décrivez brièvement votre projet, le style souhaité, l'espace concerné..."
                                 />
                             </div>

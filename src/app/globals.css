@@ -34,11 +34,13 @@
 }
 
 @theme {
-  --color-brand-terracotta: #C94A2C;
-  --color-brand-beige: #C8A07A;
-  --color-brand-cream: #FAF5EE;
-  --color-brand-dark: #2D2A26;
-  --color-brand-brass: #C5A059;
+  --color-brand-terracotta: var(--terracotta);
+  --color-brand-beige: var(--beige);
+  --color-brand-cream: var(--cream);
+  --color-brand-dark: var(--dark);
+  --color-brand-brass: var(--brass);
+  --color-white: var(--white-adaptive);
+  --color-black: var(--black-adaptive);
   /* Gilroy comme font par défaut (override Tailwind v4) */
   --font-sans: 'Gilroy', ui-sans-serif, system-ui, sans-serif;
   /* Aesthetic Romance pour la font serif/display */
@@ -46,11 +48,36 @@
 }
 
 @layer base {
+  :root {
+    --terracotta: #C94A2C;
+    --beige: #C8A07A;
+    --cream: #FAF5EE; /* Light background */
+    --dark: #2D2A26; /* Dark text */
+    --brass: #C5A059;
+    --white-adaptive: #FFFFFF;
+    --black-adaptive: #000000;
+    --dark-rgb: 45, 42, 38;
+    --white-rgb: 255, 255, 255;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --terracotta: #D35D40; /* Slightly brighter for dark mode */
+      --beige: #C8A07A; 
+      --cream: #141311; /* Very dark off-black for main backgrounds */
+      --dark: #F5EBE0; /* Soft off-white for text */
+      --brass: #D4B16A;
+      --white-adaptive: #1C1A18; /* Dark card background */
+      --black-adaptive: #F5EBE0; /* Invert black to light beige */
+      --dark-rgb: 245, 235, 224;
+      --white-rgb: 28, 26, 24;
+    }
+  }
 
   body {
     font-family: 'Gilroy', ui-sans-serif, system-ui, sans-serif;
-    background-color: var(--color-brand-cream);
-    color: var(--color-brand-dark);
+    background-color: var(--cream);
+    color: var(--dark);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
