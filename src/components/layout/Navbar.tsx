@@ -28,13 +28,13 @@ export default function Navbar() {
 
           {/* Liens de navigation (Desktop) - Pill */}
           <div className="hidden md:flex pointer-events-auto bg-white/90 backdrop-blur-md shadow-sm border border-brand-beige/20 items-center gap-8 text-[13px] font-medium px-8 py-3 rounded-full">
-            <Link href="/" className="text-brand-dark hover:text-brand-terracotta transition-colors">
+            <Link href="/portfolio" className="text-brand-dark hover:text-brand-terracotta transition-colors">
               Projets
             </Link>
-            <Link href="#about" className="text-brand-dark/70 hover:text-brand-terracotta transition-colors">
+            <Link href="/about" className="text-brand-dark/70 hover:text-brand-terracotta transition-colors">
               À propos
             </Link>
-            <Link href="#services" className="text-brand-dark/70 hover:text-brand-terracotta transition-colors">
+            <Link href="/expertise" className="text-brand-dark/70 hover:text-brand-terracotta transition-colors">
               Expertise
             </Link>
             {/* Phase 2: E-commerce */}

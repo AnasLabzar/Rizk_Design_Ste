@@ -38,17 +38,26 @@
   --color-brand-beige: #C8A07A;
   --color-brand-cream: #FAF5EE;
   --color-brand-dark: #2D2A26;
-  /* Nouvelle couleur : Laiton/Or vieilli pour la touche marocaine */
   --color-brand-brass: #C5A059;
+  /* Gilroy comme font par défaut (override Tailwind v4) */
+  --font-sans: 'Gilroy', ui-sans-serif, system-ui, sans-serif;
+  /* Aesthetic Romance pour la font serif/display */
+  --font-aesthetic: var(--font-aesthetic), ui-serif, Georgia, serif;
 }
 
 @layer base {
+
   body {
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'Gilroy', ui-sans-serif, system-ui, sans-serif;
     background-color: var(--color-brand-cream);
     color: var(--color-brand-dark);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    /* Maintien de Gilroy par défaut sur les titres, sauf si font-serif est utilisé */
+    font-family: 'Gilroy', ui-sans-serif, system-ui, sans-serif;
   }
 }
 
@@ -59,4 +68,14 @@ details>summary {
 
 details>summary::-webkit-details-marker {
   display: none;
+}
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 35s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }

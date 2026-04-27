@@ -1,113 +1,109 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const servicesList = [
     {
-        num: "01",
         title: "Conception 3D",
-        description: "Visualisez votre futur espace avec nos rendus 3D hyper-réalistes avant même le début des travaux. Une projection parfaite de vos idées.",
-        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+        description: "Visualisez votre futur espace avec nos rendus hyper-réalistes. Une projection parfaite, élevant la modélisation au rang d'œuvre digitale.",
+        gif: "https://theexceptionalfurniture.com/wp-content/uploads/2024/08/turbulent-flow_13319680.gif"
     },
     {
-        num: "02",
         title: "Aménagement",
-        description: "Optimisation de votre intérieur pour allier esthétique moderne, confort et fonctionnalité absolue. Des espaces fluides et réfléchis.",
-        image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop",
+        description: "Nous sculptons les volumes pour allier esthétique contemporaine et fluidité. Chaque aménagement respecte l'âme du lieu.",
+        gif: "https://theexceptionalfurniture.com/wp-content/uploads/2024/08/art-work_15353530.gif"
     },
     {
-        num: "03",
         title: "Mobilier Sur-Mesure",
-        description: "Choix de pièces uniques et de mobilier haut de gamme adaptés à votre style. Nous sélectionnons les meilleurs matériaux.",
-        image: "https://images.unsplash.com/photo-1596079890744-c1a0462d0975?q=80&w=1200&auto=format&fit=crop",
+        description: "La rareté de l'artisanat d'exception. Nos pièces sont fabriquées par des artisans d'élite avec des matériaux nobles.",
+        gif: "https://theexceptionalfurniture.com/wp-content/uploads/2024/08/natural-product_14955332.gif"
     },
     {
-        num: "04",
-        title: "Suivi de Projet",
-        description: "Nous coordonnons l'ensemble des étapes et assurons le bon déroulement de votre aménagement de A à Z. Zéro stress pour vous.",
-        image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
+        title: "Suivi de Chantier",
+        description: "Nous gérons chaque corps de métier avec une rigueur implacable pour que l'œuvre finale soit le reflet exact de la conception.",
+        gif: "https://theexceptionalfurniture.com/wp-content/uploads/2024/08/tile_10966491.gif"
     },
 ];
 
 export default function Services() {
-    const sectionRef = useRef<HTMLElement>(null);
-    const { scrollYProgress } = useScroll({
-        target: sectionRef,
-        offset: ["start end", "end start"]
-    });
-
-    // Parallax effect on the header
-    const headerY = useTransform(scrollYProgress, [0, 0.5], [50, 0]);
-
     return (
-        <section id="services" ref={sectionRef} className="py-24 md:py-32 relative">
+        <section id="services" className="pt-24 md:pt-32 pb-24 bg-transparent relative">
             <div className="w-full max-w-7xl mx-auto px-5 md:px-8 lg:px-12">
                 
-                {/* ── En-tête de section ── */}
-                <motion.div 
-                    style={{ y: headerY }}
-                    className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20"
-                >
-                    <div className="max-w-2xl">
-                        <div className="flex items-center gap-3 mb-6">
+                {/* ── En-tête Éditorial Luxe ── */}
+                <div className="flex flex-col md:flex-row justify-between items-end border-b border-brand-dark/10 pb-12 mb-16 gap-8">
+                    <motion.div 
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        className="flex flex-col gap-4"
+                    >
+                        <div className="flex items-center gap-3">
                             <span className="w-2 h-2 rounded-full bg-brand-terracotta" />
-                            <h2 className="text-xs font-bold text-brand-dark/50 tracking-[0.2em] uppercase">
-                                Notre Expertise
+                            <h2 className="text-[11px] font-bold text-brand-dark/50 tracking-[0.25em] uppercase">
+                                Nos Domaines d&apos;Expertise
                             </h2>
                         </div>
-                        <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark leading-[1.1] tracking-tight">
-                            Des espaces conçus <br />
-                            <span className="font-serif italic font-normal text-brand-terracotta">sur mesure.</span>
+                        <h3 className="text-5xl md:text-6xl font-aesthetic text-brand-dark leading-[1.1]">
+                            L&apos;excellence à <span className="text-brand-terracotta">chaque étape.</span>
                         </h3>
-                    </div>
-                    <p className="text-brand-dark/60 text-base md:text-lg max-w-md leading-relaxed">
-                        Nous transformons vos visions en réalité grâce à un accompagnement personnalisé et une expertise technique pointue pour chaque détail.
-                    </p>
-                </motion.div>
+                    </motion.div>
+                    
+                    <motion.div 
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="md:max-w-sm"
+                    >
+                        <p className="text-brand-dark/60 text-base font-medium leading-relaxed">
+                            Une approche holistique où l&apos;architecture rencontre l&apos;art. Découvrez nos quatre piliers fondamentaux pour transformer votre vision en réalité.
+                        </p>
+                    </motion.div>
+                </div>
 
-                {/* ── Grille de services Premium ── */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                {/* ── Grille de services (Luxe & Minimaliste) ── */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                     {servicesList.map((service, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ duration: 0.7, delay: index * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
-                            className="group relative overflow-hidden rounded-[2.5rem] bg-white border border-brand-beige/40 hover:border-brand-terracotta/20 min-h-[420px] md:min-h-[480px] p-8 md:p-12 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.02)]"
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.6, delay: index * 0.1 }}
+                            className="group bg-white/40 hover:bg-white transition-colors duration-500 rounded-[20px] p-8 md:p-10 border border-brand-dark/[0.04] shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] flex flex-col"
                         >
-                            {/* Image de fond au hover */}
-                            <div className="absolute inset-0 z-0 overflow-hidden rounded-[2.5rem]">
-                                <img
-                                    src={service.image}
-                                    alt={service.title}
-                                    className="w-full h-full object-cover scale-110 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-700 ease-out"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/40 via-brand-dark/70 to-brand-dark/90 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                            {/* Icone GIF Animé */}
+                            <div className="mb-10 relative">
+                                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center overflow-hidden border border-brand-dark/5 group-hover:border-brand-terracotta/20 transition-colors duration-500 relative">
+                                    {/* unoptimized={true} est CRITIQUE pour que les GIFs s'animent dans Next.js */}
+                                    <Image 
+                                        src={service.gif}
+                                        alt={service.title}
+                                        width={48}
+                                        height={48}
+                                        unoptimized={true}
+                                        className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                                {/* Petit numéro stylisé en arrière plan */}
+                                <span className="absolute -top-4 -right-2 text-7xl font-aesthetic text-brand-dark/[0.03] pointer-events-none group-hover:text-brand-terracotta/[0.05] transition-colors duration-500">
+                                    0{index + 1}
+                                </span>
                             </div>
 
-                            {/* Contenu de la carte */}
-                            <div className="relative z-10 h-full flex flex-col justify-between">
-                                <div className="flex justify-between items-start">
-                                    <span className="text-6xl md:text-7xl font-light text-brand-dark/5 group-hover:text-white/20 transition-colors duration-500 font-serif">
-                                        {service.num}
-                                    </span>
-                                    <div className="w-14 h-14 rounded-full border border-brand-dark/10 flex items-center justify-center bg-white/50 backdrop-blur-sm group-hover:border-white/20 group-hover:bg-white/10 group-hover:backdrop-blur-md transition-all duration-500 group-hover:-rotate-45">
-                                        <ArrowUpRight className="w-6 h-6 text-brand-dark group-hover:text-white transition-colors duration-500" />
-                                    </div>
-                                </div>
-
-                                <div className="mt-20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                                    <h4 className="text-2xl md:text-3xl font-bold text-brand-dark group-hover:text-white transition-colors duration-500 mb-4 tracking-tight">
-                                        {service.title}
-                                    </h4>
-                                    <p className="text-brand-dark/60 group-hover:text-white/80 transition-colors duration-500 leading-relaxed max-w-sm">
-                                        {service.description}
-                                    </p>
-                                </div>
-                            </div>
+                            {/* Contenu */}
+                            <h4 className="text-xl font-bold text-brand-dark mb-4 tracking-tight">
+                                {service.title}
+                            </h4>
+                            <p className="text-brand-dark/60 text-sm leading-relaxed font-medium mt-auto">
+                                {service.description}
+                            </p>
+                            
+                            {/* Ligne décorative au hover */}
+                            <div className="w-0 h-[2px] bg-brand-terracotta mt-8 group-hover:w-full transition-all duration-500 ease-out" />
                         </motion.div>
                     ))}
                 </div>

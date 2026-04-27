@@ -5,26 +5,8 @@ import { Sparkles, Hexagon, Layers } from "lucide-react";
 
 export default function Craftsmanship() {
     return (
-        <section className="py-24 md:py-32 relative overflow-hidden" style={{ background: "#FDFCF8" }}>
+        <section className="py-24 md:py-32 relative overflow-hidden">
             
-            {/* ── Background Pattern (Moroccan Minimalist) ── */}
-            <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none">
-                <svg width="100%" height="100%">
-                    <defs>
-                        <pattern id="moroccan-pattern" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-                            <path d="M40 0 L80 40 L40 80 L0 40 Z" fill="none" stroke="#3d2e23" strokeWidth="0.5" />
-                            <path d="M40 20 L60 40 L40 60 L20 40 Z" fill="none" stroke="#3d2e23" strokeWidth="0.5" />
-                            <circle cx="40" cy="40" r="10" fill="none" stroke="#3d2e23" strokeWidth="0.5" />
-                            <path d="M0 0 L20 20 M80 0 L60 20 M0 80 L20 60 M80 80 L60 60" stroke="#3d2e23" strokeWidth="0.5" />
-                        </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#moroccan-pattern)" />
-                </svg>
-            </div>
-
-            {/* Dégradé doux pour fondre le pattern */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#FDFCF8] via-transparent to-[#FDFCF8] z-0 pointer-events-none" />
-
             <div className="w-full max-w-7xl mx-auto px-5 md:px-8 lg:px-12 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
@@ -99,7 +81,7 @@ export default function Craftsmanship() {
                             </div>
                             <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark leading-[1.1] tracking-tight">
                                 L&apos;Élégance du <br />
-                                <span className="text-brand-terracotta italic font-serif font-normal">Néo-Beldi.</span>
+                                <span className="text-brand-terracotta italic font-aesthetic font-normal">Néo-Beldi.</span>
                             </h3>
                         </motion.div>
 

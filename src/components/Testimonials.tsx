@@ -34,10 +34,10 @@ export default function Testimonials() {
     };
 
     return (
-        <section className="py-32 overflow-hidden bg-brand-cream relative">
+        <section className="py-32 overflow-hidden bg-transparent relative">
 
             {/* Décoration : Énorme guillemet en arrière-plan */}
-            <div className="absolute top-20 left-10 md:left-32 text-[20rem] text-brand-dark/5 font-serif leading-none pointer-events-none select-none">
+            <div className="absolute top-20 left-10 md:left-32 text-[20rem] text-brand-dark/5 font-aesthetic leading-none pointer-events-none select-none">
                 "
             </div>
 

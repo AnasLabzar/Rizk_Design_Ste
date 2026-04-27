@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import localFont from "next/font/local";
+
+const aestheticRomance = localFont({
+  src: "../../public/fonts/AestheticRomance/Aesthetic Romance.ttf",
+  variable: "--font-aesthetic",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Rizk Design | Aménagement d'intérieur & Mobilier",
@@ -15,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className="scroll-smooth">
-      <body className="flex flex-col min-h-screen relative">
+      <body className={`flex flex-col min-h-screen relative ${aestheticRomance.variable}`}>
         {/* ── Global Moroccan Pattern Background ── */}
         <div className="fixed inset-0 z-[-1] pointer-events-none flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 opacity-[0.08]">
