@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 export default function Contact() {
     return (
@@ -70,6 +71,7 @@ export default function Contact() {
 
                             <button 
                                 type="submit" 
+                                onClick={() => trackEvent('click_submit_contact')}
                                 className="w-full group flex justify-center items-center gap-3 bg-brand-dark text-white font-medium py-5 rounded-2xl hover:bg-brand-terracotta transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-brand-terracotta/20 mt-2"
                             >
                                 <span className="text-[13px] tracking-wider font-semibold">Demander un devis gratuit</span>

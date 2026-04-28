@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Send, CheckCircle, ChevronDown } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 // Types de projets disponibles
 const projectTypes = [
@@ -50,6 +51,7 @@ export default function DevisForm({ isOpen, onClose }: DevisFormProps) {
         await new Promise((r) => setTimeout(r, 1500));
         setIsLoading(false);
         setSubmitted(true);
+        trackEvent('submit_devis_form', { type: form.type, city: form.ville });
     };
 
     const handleClose = () => {

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { ArrowUpRight, Menu } from 'lucide-react';
 import { useState } from 'react';
 import DevisForm from '@/components/DevisForm';
+import { trackEvent } from '@/lib/analytics';
 
 export default function Navbar() {
   const [devisOpen, setDevisOpen] = useState(false);
@@ -52,7 +53,10 @@ export default function Navbar() {
           {/* CTA — ouvre le formulaire devis */}
           <div className="hidden md:flex items-center gap-4">
             <button
-              onClick={() => setDevisOpen(true)}
+              onClick={() => {
+                setDevisOpen(true);
+                trackEvent('click_devis_navbar');
+              }}
               className="pointer-events-auto bg-brand-dark text-white px-6 py-3 rounded-full text-[13px] hover:bg-brand-terracotta transition-colors flex items-center gap-2 font-medium shadow-md"
             >
               Devis gratuit <ArrowUpRight className="w-4 h-4" />
